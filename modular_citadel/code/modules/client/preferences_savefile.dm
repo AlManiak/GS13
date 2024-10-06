@@ -90,11 +90,13 @@
 	//custom job titles
 	WRITE_FILE(S["alt_titles_preferences"], alt_titles_preferences)
 	//belly features
+	//GS13 - Added belly shapes
 	WRITE_FILE(S["feature_has_belly"], features["has_belly"])
 	WRITE_FILE(S["feature_belly_size"], features["belly_size"])
 	WRITE_FILE(S["feature_belly_color"], features["belly_color"])
 	WRITE_FILE(S["feature_hide_belly"], features["hide_belly"])
 	WRITE_FILE(S["feature_inflatable_belly"], features["inflatable_belly"])
+	WRITE_FILE(S["feature_belly_shape"], features["belly_shape"])
 	//butt features
 	WRITE_FILE(S["feature_has_anus"], features["has_anus"])
 	WRITE_FILE(S["feature_butt_size"], features["butt_size"])

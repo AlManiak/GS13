@@ -457,6 +457,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["feature_can_get_preg"]			>> features["can_get_preg"] //hyperstation 13
 	//belly features
 	S["feature_has_belly"]				>> features["has_belly"]
+	S["feature_belly_shape"]			>> features["belly_shape"]
 	S["feature_belly_size"]				>> features["belly_size"]
 	S["feature_belly_color"]			>> features["belly_color"]
 	S["feature_hide_belly"]				>> features["hide_belly"]

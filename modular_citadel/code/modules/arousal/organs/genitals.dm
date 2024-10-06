@@ -232,6 +232,7 @@
 		var/obj/item/organ/genital/belly/B = new
 		if(dna.features["belly_size"])
 			B.size = dna.features["belly_size"]-1
+		B.shape = dna.features["belly_shape"]
 		B.Insert(src)
 		if(B)
 			if(dna.species.use_skintones && dna.features["genitals_use_skintone"])
@@ -450,7 +451,7 @@
 				if(/obj/item/organ/genital/breasts)
 					S = GLOB.breasts_shapes_list[G.shape]
 				if(/obj/item/organ/genital/belly)
-					S = GLOB.breasts_shapes_list[G.shape]
+					S = GLOB.belly_shapes_list[G.shape]
 				if(/obj/item/organ/genital/anus)
 					S = GLOB.breasts_shapes_list[G.shape]
 
@@ -476,7 +477,7 @@
 			if(G.slot == "belly") // GS13
 
 				// Default settings
-				genital_overlay.icon_state = "belly_[size]"
+				genital_overlay.icon_state = "belly_[S.icon_state]_[size]"
 				genital_overlay.layer = -UNDER_BACK_LAYER
 				colourcode = "belly_color"
 

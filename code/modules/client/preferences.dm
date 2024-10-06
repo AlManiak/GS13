@@ -159,6 +159,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"hide_belly" = FALSE,
 		"inflatable_belly" = FALSE,
 		"belly_color" = "fff",
+		"belly_shape" = "Flabby",
 		"has_anus" = FALSE,
 		"butt_color" = "fff",
 		"has_balls" = FALSE,
@@ -959,6 +960,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a style='display:block;width:50px' href='?_src_=prefs;preference=has_belly'>[features["has_belly"] == TRUE ? "Yes" : "No"]</a>"
 				if(features["has_belly"])
 					dat += "<b>Belly Size:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=belly_size;task=input'>[features["belly_size"]]</a>"
+					dat += "<b>Belly Shape:</b> <a style='display:block;width:120px' href='?_src_=prefs;preference=belly_shape;task=input'>[features["belly_shape"]]</a>"
 					if(pref_species.use_skintones && features["genitals_use_skintone"] == TRUE)
 						dat += "<b>Color:</b></a><BR>"
 						dat += "<span style='border: 1px solid #161616; background-color: #[skintone2hex(skin_tone)];'>&nbsp;&nbsp;&nbsp;</span>(Skin tone overriding)<br>"
@@ -2499,6 +2501,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/new_buttsize = input(user, "Butt size :\n(1-10)", "Character Preference") as num|null
 					if(new_buttsize)
 						features["butt_size"] = clamp(new_buttsize, 1, 10)
+				
+				//GS13 - Added belly shapes
+				if("belly_shape")
+					var/new_shape
+					new_shape = input(user, "Belly shape:", "Character Preference") as null|anything in GLOB.belly_shapes_list
+					if(new_shape)
+						features["belly_shape"] = new_shape
 
 				if("vag_shape")
 					var/new_shape

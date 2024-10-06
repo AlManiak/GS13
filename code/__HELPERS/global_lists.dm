@@ -66,6 +66,13 @@
 		var/datum/sprite_accessory/testicles/value = GLOB.balls_shapes_list[K]
 		GLOB.balls_shapes_icons[K] = value.icon_state
 //END OF CIT CHANGES
+//GS13 - Changes
+	// Belly types
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/belly, GLOB.belly_shapes_list)
+	for(var/K in GLOB.belly_shapes_list)
+		var/datum/sprite_accessory/belly/value = GLOB.belly_shapes_list[K]
+		GLOB.belly_shapes_icons[K] = value.icon_state
+//GS13 - EOC
 
 	//Species
 	for(var/spath in subtypesof(/datum/species))

@@ -137,13 +137,22 @@
     name = "Gaping"
 
 //BELLY BE HERE
+///GS13 - Adding extra belly types. We keep the default belly
 /datum/sprite_accessory/belly
 	icon = 'hyperstation/icons/obj/genitals/belly.dmi'
-	icon_state = "belly"
+	icon_state = "flabby"
 	name = "belly"
 	gender_specific = 0
 	color_src = "belly_color"
 	locked = 0
+/datum/sprite_accessory/belly/flabby
+	icon_state = "flabby"
+	name = "Flabby"
+
+//GS13Extra belly types
+/datum/sprite_accessory/belly/round
+	icon_state = "round"
+	name = "Round"
 
 //BUTT BE HERE
 /datum/sprite_accessory/anus

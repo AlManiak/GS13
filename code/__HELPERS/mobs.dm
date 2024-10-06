@@ -79,6 +79,10 @@
 	if(!GLOB.moth_markings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/moth_markings, GLOB.moth_markings_list)
 
+	//GS13 Changes - Belly variety
+	if(!GLOB.belly_shapes_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/belly, GLOB.belly_shapes_list)
+
 	//CIT CHANGES - genitals and such
 	if(!GLOB.cock_shapes_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/penis, GLOB.cock_shapes_list)
@@ -183,6 +187,7 @@
 		"cock_shape"		= pick(GLOB.cock_shapes_list),
 		"cock_length"		= 6,
 		"belly_size"		= 1,
+		"belly_shape"		= pick(GLOB.belly_shapes_list),
 		"butt_size"			= 1,
 		"cock_girth_ratio"	= COCK_GIRTH_RATIO_DEF,
 		"cock_color"		= pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"),
